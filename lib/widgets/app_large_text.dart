@@ -2,12 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-
 // a widget fo our Large sized Texts (Reusable)
 class AppLargeText extends StatelessWidget {
-   AppLargeText({
+  AppLargeText({
     Key? key,
-   this.textSize = 30,
+    this.textSize = 30,
     required this.text,
     this.textColor = Colors.black,
   }) : super(key: key);
@@ -20,10 +19,7 @@ class AppLargeText extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-        color: textColor,
-        fontSize: textSize,
-        fontWeight: FontWeight.bold
-      ),
+          color: textColor, fontSize: textSize, fontWeight: FontWeight.bold),
     );
   }
 }

@@ -1,12 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
+// another reusable text widget
 class AppText extends StatelessWidget {
-   AppText({
+  AppText({
     Key? key,
-    this.textSize = 15,
+    this.textSize = 17,
     required this.text,
-    this.textColor = Colors.black,
+    this.textColor = Colors.black54,
   }) : super(key: key);
   late double textSize;
   final String text;
@@ -14,10 +15,9 @@ class AppText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text,
-    style: TextStyle(
-      fontSize: textSize,
-      color:textColor
-    ) ,);
+    return Text(
+      text,
+      style: TextStyle(fontSize: textSize, color: textColor),
+    );
   }
 }
