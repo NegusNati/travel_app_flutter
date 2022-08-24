@@ -77,7 +77,7 @@ class _WelcomePageState extends State<WelcomePage> {
                             ),
                           ]),
                       Column(
-                        children: List.generate(3, (indexDots) {
+                        children: List.generate(3, (indexDots) { //used to contain a list with spcific length to parse through
                           return Container(
                             margin: const EdgeInsets.only(bottom: 2),
                             width: 8,
