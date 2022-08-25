@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:travel_app_flutter/util/colors.dart';
+import 'package:travel_app_flutter/widgets/app_text.dart';
 
 class ResponsiveButton extends StatelessWidget {
   ResponsiveButton({Key? key, this.width, this.isLonger = false, this.text})
@@ -22,7 +23,7 @@ class ResponsiveButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Text(text!),
+            isLonger == true?AppText(text: text!, textColor: Colors.white): const SizedBox(),
             Image.asset("images/button-one.png"),
           ],
         ),
