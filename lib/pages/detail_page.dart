@@ -190,10 +190,16 @@ class _DeatilPageState extends State<DeatilPage> {
                       height: 5,
                     ),
                     //the description text
-                    AppText(
-                      text:
-                          "This site is the pinical of the discovery world of this century, we explore it in depth in our PodCast as in Fuck you Too lol",
-                      textSize: 15,
+                    SingleChildScrollView(
+                      child: SizedBox(
+                        width: double.maxFinite,
+                        height: 60,
+                        child: AppText(
+                          text:
+                              "This site is the pinical of the discovery world of this century, we explore it in depth in our PodCast as in Fuck you Too lol",
+                          textSize: 15,
+                        ),
+                      ),
                     ),
                     SizedBox(
                       height: size.height * 0.15,
