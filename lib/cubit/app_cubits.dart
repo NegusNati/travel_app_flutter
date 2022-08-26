@@ -29,4 +29,8 @@ late final places;
   detailPage(DataModel data){
     emit(DetailState(data));
   }
+
+  goHome(){
+    emit(LoadedState(places));
+  }
 }
