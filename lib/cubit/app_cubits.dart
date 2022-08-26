@@ -2,6 +2,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:travel_app_flutter/cubit/app_cubit_states.dart';
+import 'package:travel_app_flutter/model/data_model.dart';
 import 'package:travel_app_flutter/services/data_services.dart';
 
 class AppCubit extends Cubit<CubitStates> {
@@ -23,5 +24,9 @@ late final places;
     }catch(e){
 
     }
+  }
+
+  detailPage(DataModel data){
+    emit(DetailState(data));
   }
 }

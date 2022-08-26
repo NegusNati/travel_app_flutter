@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travel_app_flutter/cubit/app_cubit_states.dart';
 import 'package:travel_app_flutter/cubit/app_cubits.dart';
+import 'package:travel_app_flutter/pages/detail_page.dart';
 import 'package:travel_app_flutter/pages/home_page.dart';
 import 'package:travel_app_flutter/pages/navPages/main_page.dart';
 import 'package:travel_app_flutter/pages/welcome_page.dart';
@@ -25,10 +26,13 @@ class _AppLogicStatesState extends State<AppLogicStates> {
             return const WelcomePage();
           }if(state is LoadingState){
 
-            return Center(child: const CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }if(state is LoadedState){
 
-            return MainPage();
+            return const MainPage();
+          }if(state is DetailState){
+
+            return const DeatilPage();
           }else{
             return Container();
           }
