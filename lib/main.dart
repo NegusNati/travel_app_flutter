@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travel_app_flutter/cubit/app_cubit_logics.dart';
 import 'package:travel_app_flutter/cubit/app_cubits.dart';
+import 'package:travel_app_flutter/services/data_services.dart';
 
 import 'pages/detail_page.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BlocProvider<AppCubit>(create:(context) => AppCubit(), child: AppLogicStates(),
+      home: BlocProvider<AppCubit>(create:(context) => AppCubit(dataNet:DataServices() ), child: AppLogicStates(),
     ));
   }
 }
